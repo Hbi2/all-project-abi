@@ -1,0 +1,472 @@
+import time
+import pyautogui
+import pyautogui as pyauto
+import random
+from googletrans import Translator, LANGUAGES
+
+ribbon = 5*'=' 
+hiasan = 17* '--'
+ribbon2 = 17* '='
+hiasanMini = 10* '--'
+print(hiasan)
+print(ribbon,"Welcome to Project Abi",ribbon)
+print(hiasan)
+#menu login
+username= "abi"
+Pass_word = 1212
+password = False
+
+def login (user_name, Pass_word) :
+    if user_name != username and Pass_word != password :
+        hasil = False
+    else :
+        hasil = True
+        print("LOGIN BERHASIL")
+        print(ribbon2)
+    return hasil
+
+i=3
+while i>=1:
+    userName_=input("masukan username anda :")
+    password_=input("masukan password :")
+    hasil=(login(userName_, password_))
+    if hasil == True : # halaman utama
+        
+        print ('HALAMAN UTAMA')
+        print(ribbon2)
+        print ("1.koversi suhu")
+        print ("2.kalkulator")
+        print("3.Spamm BOT")
+        print("4.Bangun ruang")
+        print("5.Game Angka")
+        print("6.Translet")
+        print("7.Nialai akhir semster")
+        print("8.Persenan Jodoh")
+        print("")
+        masukanHalutama= int(input("=>"))
+        if masukanHalutama == 1 : # Temperatur suhu
+            print(hiasan)
+            print("CELCIUS KE TEMPERATUR LAIN")
+            print(hiasan)
+            print("1.Reamur")
+            print("2.Kelvin")
+            print("3.farenhaid")
+            print("NOTE: MASUKIN YG BENER BOSS JGN SAMPE SALAH!!")
+            masukanKonversi = int(input("=>"))
+            if masukanKonversi == 1 : # celcius => reamur
+                celcius1 = float(input("masukan suhu celcius :"))
+                reamur = (4/5) * celcius1
+                print("suhu dalam Reamur adalah",reamur,'Reamur')
+                print("Jgn lupa follow @Hbi2.zz")
+
+            if masukanKonversi == 2: # celcius => Kelvin
+                celcius2 = float(input("masukan  suhu celcius :"))
+                kelvin = celcius2 + 273
+                print('suhu daalam Kelvin adalah',kelvin,'Kelvin')
+                print("Jgn lupa follow @Hbi2.zz")
+            if masukanKonversi == 3: # celcius => farenhat
+                celcius3 = float(input("masukan  suhu celcius :"))
+                farenhait= ((9/5) * celcius3) + 32
+                print("suhu dalam Farenhait adalah",farenhait,'Farenhait')
+                print("Jgn lupa follow @Hbi2.zz")
+
+            
+        if masukanHalutama == 2 : # KALKULATOR
+            print(hiasan)
+            print("KALKULATOR SEDERHANA")
+            print(hiasan)
+            print("1.penjumlahan")
+            print("2.pengurangan")
+            print("3.pembagian")
+            print("4.perkalian")
+            print("5.")
+            MasukanKalkulator = int(input("=>"))
+            if MasukanKalkulator == 1 :# pertambahan
+                angkaPertama1 = int(input("Masukan angka 1 :"))
+                angkaKedua1 = int(input("Masukan angka 2 :"))
+                hasil1 = angkaPertama1 + angkaKedua1
+                print(ribbon)
+                print(hasil1)
+                print(hiasan)
+                print("Jgn lupa follow @Hbi2.zz")
+                print(hiasan)
+
+            if MasukanKalkulator == 2 :# pengurangan
+                angkaPertama2 = int(input("Masukan angka 1 :"))
+                angkaKedua2 = int(input("Masukan angka 2 :"))
+                hasil2 = angkaPertama2 - angkaKedua2
+                print(ribbon)
+                print(hasil2)
+                print(hiasan)
+                print("Jgn lupa follow @Hbi2.zz")
+                print(hiasan)
+
+            if MasukanKalkulator == 3 : # pembagian
+                angkaPertama3 = float(input("Masukan angka 1 :"))
+                angkaKedua3 = float(input("Masukan angka 2 :"))
+                hasil3 = angkaPertama3 // angkaKedua3
+                print(ribbon)
+                print(hasil3)
+                print(hiasan)
+                print("Jgn lupa follow @Hbi2.zz")
+                print(hiasan)
+
+            if MasukanKalkulator == 4 : # perkalian
+                angkaPertama4 = int(input("Masukan angka 1 :"))
+                angkaKedua4 = int(input("Masukan angka 2 :"))
+                hasil4 = angkaPertama4 * angkaKedua4
+                print(ribbon)
+                print(hasil4)
+                print(hiasan)
+                print("Jgn lupa follow @Hbi2.zz")
+                print(hiasan)
+
+        if masukanHalutama == 3 :# spambot
+            print("SELAMAT DATANG DI SPAM BOT")
+            pesan = input("masukan pesan : ")
+            n = input("nominal :")
+
+            count = 5
+            while(count != 0) :
+             time.sleep(1)
+             count -= 1
+            print("Kelar Boss!!")
+            for i in range (0, int(n)):
+                 pyauto.typewrite(pesan + '\n')
+        
+        if masukanHalutama == 4 :# bangun ruang
+            print(hiasan)
+            print("BANGUN RUANG")
+            print(hiasan)
+            print("1.Rumus Persegi panjang")
+            print("2.Rumus Persegi")
+            print("3.Rumus Segitiga")
+            print("4.Rumus Jajargenjang")
+            print("5.Rumus Lingkaran")
+            print("6.Rumus Trapesium")
+            print("7.Rumus layang2")
+            print(ribbon)
+            masukanBangunRuang = int(input("=> "))
+            if masukanBangunRuang == 1:# PERSEGI PANJANG
+                print ("--Rumus Persegi Panjang--")
+                print ("mencari luas")
+                panjang = int(input("Masukan panjang  :  "))
+                lebar = int(input("Masukan lebar  :  "))
+                print("Luas Persegi  Panjang adalah : ",panjang * lebar,'cm')
+
+                print ("-mencari keliling persegi panjang -")
+
+                panjang = int(input("Masukan panjang  :  "))
+                lebar = int(input("Masukan lebar  :  "))
+                keliling = 2 * (panjang + lebar)
+                print ("Keliling persegi  panjang adalah  :",keliling,'cm')
+
+            if masukanBangunRuang == 2 :
+                print("--Rumus Persegi--")
+                print ("-mencari mencari luas persegi-")
+                sisi = int(input("masukan sisi : "))
+                print("Luas persegi adalah : ",sisi * sisi ,'cm')
+
+                print ("-mencari mencari keliling persegi-")
+                sisi = int(input("masukan sisi : "))
+                print("Luas persegi adalah : ",sisi * 4,'cm')
+
+            if masukanBangunRuang == 3 :
+                print("--Rumus Segitiga--")
+
+                print ("-mencari mencari luas segitiga-")
+                alas = int(input("Masukan alas  :  "))
+                tinggi = int(input("Masukan tinggi  :  "))
+                print("Luas segitiga adalah  :  ",1/2 * alas * tinggi,'cm')
+
+                print ("-mencari mencari Keliling segitiga-")
+                sisi = int(input("Masukan sisi  :  "))
+                print("Keliling segitiga adalah  :  ",sisi*sisi*sisi,'cm')
+
+            if masukanBangunRuang == 4 :
+                print("--Rumus Jajargenjang--")
+
+                print ("-mencari mencari luas jajar genjang-")
+
+                alas = int(input("Masukan alas  :  "))
+                tinggi = int(input("Masukan tinggi  :  "))
+                print("Luas jajar genjang adalah  :  ",alas*tinggi,'cm')
+                
+
+                print ("-mencari mencari keliling jajar genjang-")
+                a =  int(input("masukan a  :  "))
+                b =  int(input("masukan b  :  "))
+                print("Keliling jajar genjang adalah  :  ",2*(a+b),'cm')
+
+            if masukanBangunRuang == 5 :
+                print("--Rumus Lingkaran--")
+                print ("-mencari mencari luas lingkaran-")
+                konstansta = float(input("Masukan Konstansta 3,14:  "))
+                jari = int(input("Masukan jari   :  "))
+                print("Luas lingkaran adalah  :  ",konstansta*jari,'cm')
+
+                print ("-mencari mencari keliling lingkaran-")
+                konstansta = float(input("Masukan Konstansta 3,14:  "))
+                jari = int(input("Masukan jari   :  "))
+                print("Luas lingkaran adalah  :  ",2*konstansta*jari,'cm')
+
+            # if masukanBangunRuang == 6 :
+                # print("belum siap")
+                # print("--Rumus Trapesium--")
+                # print ("-mencari luas trapesium")
+                # tinggi = int(input("masukan tinggi"))
+                # a      = int(input("masukan base 1  :  "))
+                # b      = int(input("masukan base 2  :  "))
+                # print("Luas trapesium adalah  :  ",1/2(a+b)*tinggi,'cm')
+                
+                # print ("-mencari keliling trapesium")
+                # a =  int(input("masukan a  :  "))
+                # b =  int(input("masukan b  :  "))
+                # c =  int(input("masukan c  :  "))
+                # d =  int(input("masukan d  :  "))
+                # print("keliling trapesium adalah  :  ",a+b+c+d,'cm')
+
+            if masukanBangunRuang == 7 :
+                print("--Rumus Layang2--")
+                print ("-mencari luas layang layang")
+                diagonal1 = int(input("Masukan diagonal 1  :  "))
+                diagonal2 = int(input("Masukan diagonal 2  :  "))
+                print("Luas lingkaran layang layang adalah  :  ",1/2*diagonal1*diagonal2,'cm')
+
+                print("-mencari keliling layang layang-")
+                a =  int(input("masukan a  :  "))
+                b =  int(input("masukan b  :  "))
+                c =  int(input("masukan c  :  "))
+                print("Luas lingkaran layang layang adalah  :  ",a+b+c,'cm')
+        if  masukanHalutama == 5 :
+            print(hiasanMini)
+            print("GAME ANGKA ")
+            print(hiasanMini)
+    
+            Angka = random.randint(1,99)
+            user = int(input("masukan angka dari 1 - 100 : "))
+            while Angka !="user":
+                if user < Angka:
+                     print("terbakan terlalu rendah ")
+                     user = int(input("masukan lagi ;"))
+                elif user > Angka:
+                        print("tebakan terlalu tinggi ")
+                        user = int(input("masukan lagi :"))
+                else:
+                    print("tebakan benar")
+                    break
+
+        if masukanHalutama == 6 :
+            print(hiasan)
+            print("Translet")
+            print(hiasan)
+            databahasa = ["english(en)",'indonesia(id)','arab(ar)']
+            print(databahasa)
+            translator = Translator()
+            text = input("Masukkan Text : ")
+            bahasa = input("Terjemahkan ke Bahasa :")  
+            hasil = translator.translate(text, dest = bahasa)
+
+            print("Dari ", LANGUAGES[hasil.src], " : ", text)
+            print("Ke ", LANGUAGES[hasil.dest], " : ", hasil.text)
+            print("Pronounsiasi : ", hasil.pronunciation)
+            
+        if masukanHalutama == 7 :
+            namasiswa = str(input("masukan nama siswa/i : "))
+            kelas = str (input("kelas :"))
+            tugas = float(input("masukan nilai tugas : "))
+            uts = float(input("masukan nilai UTS : "))
+            uas = float(input("masukan nilai UAS :"))
+            nilai = (0.15*tugas)+(0.35*uts)+(0.50*uas)
+
+            if nilai > 80 :
+                grade = 'A'
+            elif nilai > 70 :
+                grade = 'B'
+            elif nilai >50 :
+                grade = 'C'
+            else:
+                grade = 'E'
+
+
+            if nilai > 60 :
+                status = 'lulus'
+            else :
+                status = 'tidak lulus'
+
+            print(18*'--')
+            print(namasiswa)
+            print(kelas)
+            print('Nilai Akhir: %0.2f' % nilai)
+            print('Grade: {}'.format(grade))
+            print('Status: {}'.format(status))    
+        
+        if masukanHalutama == 8 :# presentase jodoh
+            masukanLU = str(input("masukan nama mu : "))
+            masukanCrush = str(input("masukan nama crush mu : "))
+            print(15*"--")
+            kecocokan = random.randint(1,100)
+            print(f"hasil nya {masukanCrush} dan {masukanLU} {kecocokan}% kecocokan")
+
+            if kecocokan == 1 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 2 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 3 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 4 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 5 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 6 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 7 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 8 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 9 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 10 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 11 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+            if kecocokan == 12 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 13 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 14 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 15:
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 16 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 17 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 18 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 19:
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 20 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 21 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 22 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 23 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 24 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 25 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 26 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 27 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 28 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 29 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 30 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 31 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 32 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 33 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 34 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 35:
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 36 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 37 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 38 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 39:
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+            if kecocokan == 40 :
+                print("Kasian gak jodoh wkekkwkw")
+                print("jgn maksa dek ")
+
+        
+        
+        break
+        
+   
+    else :
+        i-=1
+        print("gagal login, sisa percobaan login adalah :", i )
+
+        
+
